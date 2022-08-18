@@ -32,3 +32,14 @@
 .grade-container {
   display: flex;
 }
+
+@media screen and (max-width: 700px) {
+  .greeting-img {
+    width: 20rem;
+    height: 7rem;
+  }
+
+  .greeting-title {
+    font-size: 1.5rem;
+  }
+}
