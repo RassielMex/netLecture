@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Detail from "../views/Detail/Detail";
 import Home from "../views/Home/Home";
 import Login from "../views/Login/Login";
@@ -14,8 +20,8 @@ const RouteComponent = () => {
   };
 
   return (
-    <div>
-      <BrowserRouter>
+    <>
+      <HashRouter>
         <Routes>
           <Route
             index
@@ -44,8 +50,8 @@ const RouteComponent = () => {
           ></Route>
           <Route path="*" element={<h1>Ups! algo salió mal</h1>}></Route>
         </Routes>
-      </BrowserRouter>
-    </div>
+      </HashRouter>
+    </>
   );
 };
 
