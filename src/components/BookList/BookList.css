@@ -1,0 +1,12 @@
+.book-list h2 {
+  margin-top: 1rem;
+}
+
+.book-list-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 11rem);
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+}

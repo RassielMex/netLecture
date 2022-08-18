@@ -1,0 +1,19 @@
+.grade {
+  margin: 1rem;
+  animation: slideUp 800ms ease-out;
+}
+
+.grade-img {
+  width: 225px;
+  height: 225px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0.2;
+    transform: translateY(160px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,67 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../img/netflixLogin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-login {
+  height: 50%;
+  width: 30%;
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: rgba(17, 17, 17, 0.8);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+  border: none;
+}
+label {
+  display: block;
+}
+input {
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+}
+
+.error {
+  color: red;
+}
