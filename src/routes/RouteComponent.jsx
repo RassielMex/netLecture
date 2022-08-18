@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  HashRouter,
-  Navigate,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Detail from "../views/Detail/Detail";
 import Home from "../views/Home/Home";
 import Login from "../views/Login/Login";
