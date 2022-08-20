@@ -18,3 +18,9 @@
   width: 1rem;
   height: 1rem;
 }
+@media screen and (max-width: 700px) {
+  .detail-img {
+    max-height: 40rem;
+    max-width: 20rem;
+  }
+}
