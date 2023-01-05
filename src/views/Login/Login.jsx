@@ -2,7 +2,7 @@ import React from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import "./Login.css";
 import { useState } from "react";
@@ -60,39 +60,42 @@ const Login = () => {
     formik;
 
   return (
-    <div className="container">
-      <div className="container-login">
-        <h3>Acceso</h3>
-        {logInError && <p className="error">{logInError}</p>}
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <label htmlFor="email">Correo electronico:</label>
-            <input
-              type="text"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            {errors.email && touched.email && (
-              <p className="error">{errors.email}</p>
-            )}
-          </fieldset>
-          <fieldset>
-            <label htmlFor="password">Contraseña:</label>
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            {errors.password && touched.password && (
-              <p className="error">{errors.password}</p>
-            )}
-          </fieldset>
-          <button type="submit">Entrar</button>
-        </form>
+    <>
+      {sessionStorage.getItem("loggedIn") && <Navigate to={"/"} />}
+      <div className="container">
+        <div className="container-login">
+          <h3>Acceso</h3>
+          {logInError && <p className="error">{logInError}</p>}
+          <form onSubmit={handleSubmit}>
+            <fieldset>
+              <label htmlFor="email">Correo electronico:</label>
+              <input
+                type="text"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.email && touched.email && (
+                <p className="error">{errors.email}</p>
+              )}
+            </fieldset>
+            <fieldset>
+              <label htmlFor="password">Contraseña:</label>
+              <input
+                type="password"
+                name="password"
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.password && touched.password && (
+                <p className="error">{errors.password}</p>
+              )}
+            </fieldset>
+            <button type="submit">Entrar</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -7,12 +7,16 @@ import avatar3 from "../../img/avatar3.png";
 import netflixAudio from "../../sounds/Netflix-Intro-Sound.mp3";
 
 const Greeting = () => {
-  const [visible, setVisible] = useState(false);
+  const firstTimeVisited = sessionStorage.getItem("firstTimeVisited")
+    ? true
+    : false;
+  const [visible, setVisible] = useState(firstTimeVisited);
 
   const handleClick = () => {
     setVisible(true);
     const netflixSound = new Audio(netflixAudio);
     netflixSound.play();
+    sessionStorage.setItem("firstTimeVisited", false);
   };
 
   return (
